@@ -32,7 +32,7 @@ export default function page() {
 
     }
     const senddata = async() => {
-       const sd = await axios.post('http://localhost:3500/' , {
+       const sd = await axios.post('https://backend-crud-j5a2.onrender.com/' , {
           sellitem,
           price,
           desc,

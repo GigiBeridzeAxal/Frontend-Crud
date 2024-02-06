@@ -14,7 +14,7 @@ export default function Example() {
   const [data , setdata] = useState([])
 
  const delteitem = async(dater) => {
-   const deletecrud = await axios.delete('http://localhost:3500/' , dater._id )
+   const deletecrud = await axios.delete('https://backend-crud-j5a2.onrender.com/' , dater._id )
    
 
  }
@@ -22,7 +22,7 @@ export default function Example() {
   useEffect(() => {
    
     const getusercurdswithid = async() => {
-     const getcruds = await axios.get('http://localhost:3500/')
+     const getcruds = await axios.get('https://backend-crud-j5a2.onrender.com/')
      setdata(getcruds.data)
 
     

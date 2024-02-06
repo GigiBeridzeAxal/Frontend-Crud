@@ -12,7 +12,7 @@ export default function page() {
     
 
     const datagetter = async() => {
-      const getdata = await axios.get('http://localhost:3500/')
+      const getdata = await axios.get('https://backend-crud-j5a2.onrender.com/')
    
       setdata(getdata.data)
   
