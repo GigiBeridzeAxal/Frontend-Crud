@@ -13,9 +13,11 @@ export default function page() {
 
     const datagetter = async() => {
       const getdata = await axios.get('https://backend-crud-j5a2.onrender.com/')
-   
+     setTimeout(() => {
       setdata(getdata.data)
   
+     }, 10000);
+      
 
     }
     datagetter()
@@ -50,11 +52,12 @@ export default function page() {
             </tr>
         </thead>
         <tbody>
+        
         {
                    data.map(dater => 
                     <>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-           
+             
                     
                   
 
@@ -66,10 +69,14 @@ export default function page() {
                     {dater.sellitem}
                 </th>
                 <td class="px-6 py-4">
-                {dater.price} $
+                {dater.price} {data == "Loading" ? <div></div> : "$" }
                 </td>
                 <td class="px-6 py-4">
                 {dater.desc}
+                {data == "Loading" ?   <div className="loading" >
+                <div className="loadname">Loading...</div>
+               </div> : <div className="none" ></div>}
+            
                 </td>
                 <td class="px-6 py-4">
                 {dater.by}

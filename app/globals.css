@@ -81,3 +81,9 @@ body{
 .Hello div{
   margin: 20px;
 }
+.loading{
+  width: 100%;
+}
+.loadname{
+  width: 100%;
+}
