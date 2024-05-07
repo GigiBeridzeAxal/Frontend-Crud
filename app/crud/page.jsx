@@ -16,7 +16,7 @@ export default function page() {
      setTimeout(() => {
       setdata(getdata.data)
   
-     }, 10000);
+     }, 3000);
       
 
     }
